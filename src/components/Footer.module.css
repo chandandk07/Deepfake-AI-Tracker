@@ -1,0 +1,121 @@
+.footer {
+    background: #03060f;
+    padding: 60px 0 40px;
+    border-top: 1px solid var(--border);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.accent {
+    color: var(--cyan);
+}
+
+.brand p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.social:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+.col h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.col ul a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.col ul a:hover {
+    color: var(--text-primary);
+}
+
+.bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.bottom p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.disc {
+    opacity: 0.6;
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:540px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

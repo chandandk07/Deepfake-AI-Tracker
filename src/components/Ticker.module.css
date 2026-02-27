@@ -1,0 +1,43 @@
+.bar {
+    background: rgba(0, 212, 255, 0.06);
+    border-top: 1px solid rgba(0, 212, 255, 0.15);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 48px;
+    position: relative;
+    z-index: 10;
+}
+
+.label {
+    background: var(--grad-primary);
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.track {
+    flex: 1;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    gap: 80px;
+    padding: 0 40px;
+    animation: ticker 50s linear infinite;
+    white-space: nowrap;
+}
+
+.content span {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}

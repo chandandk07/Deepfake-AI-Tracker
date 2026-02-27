@@ -1,0 +1,109 @@
+.section {
+    background: var(--bg-2);
+}
+
+.stepsWrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+.line {
+    position: absolute;
+    left: 27px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--cyan), var(--purple));
+}
+
+.step {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    padding: 28px 0 28px 80px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.step.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.stepNum {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--bg-2);
+    border: 2px solid var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--cyan);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.stepIcon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 56px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.stepContent h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.stepContent p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.modelsSection {
+    text-align: center;
+}
+
+.modelsIntro {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.modelsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.chip {
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: default;
+    transition: all 0.3s;
+}
+
+.chip:hover {
+    background: rgba(124, 58, 237, 0.2);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}

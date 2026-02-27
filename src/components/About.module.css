@@ -1,0 +1,161 @@
+.section {
+    background: var(--bg-2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.text p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.text strong {
+    color: var(--text-primary);
+}
+
+.text em {
+    color: var(--cyan);
+    font-style: normal;
+}
+
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.chip {
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: var(--cyan);
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: default;
+    transition: all 0.3s;
+}
+
+.chip:hover {
+    background: rgba(0, 212, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Globe */
+.globe {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 212, 255, 0.04);
+}
+
+.ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    animation: globeRotate 8s linear infinite;
+}
+
+.ringB {
+    inset: 20px;
+    border-color: rgba(124, 58, 237, 0.25);
+    animation-direction: reverse;
+    animation-duration: 12s;
+}
+
+.globeCore {
+    text-align: center;
+}
+
+.globeIcon {
+    font-size: 2.8rem;
+}
+
+.globeCore p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 8px var(--cyan);
+    transform: translate(-50%, -50%);
+}
+
+.pulse {
+    background: var(--pink);
+    box-shadow: 0 0 12px var(--pink);
+    animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+/* Feed */
+.feedCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.feedHeader {
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.feedDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: blink 1.5s infinite;
+}
+
+.feedList {
+    padding: 8px 0;
+}
+
+.feedItem {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    animation: slideIn 0.4s ease both;
+}
+
+@media(max-width:1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .globe {
+        width: 220px;
+        height: 220px;
+    }
+}
