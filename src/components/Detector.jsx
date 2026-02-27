@@ -23,7 +23,9 @@ const ANALYSIS_STEPS = [
     'Generating final verdict…',
 ];
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = 'https://robyn-stretchable-yong.ngrok-free.dev';
+
+;
 
 /* ─── upload panel ───────────────────────────── */
 function UploadPanel({ tab, onFile, hasFile, fileName }) {
@@ -392,3 +394,4 @@ export default function Detector() {
         </section>
     );
 }
+
